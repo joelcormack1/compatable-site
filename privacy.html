@@ -17,7 +17,7 @@
 
 <article>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: September 27, 2026</p>
+<p class="updated">Last updated: October 19, 2026</p>
 <p>Compatable helps you check restaurant menus and packaged foods against your dietary needs and allergies. We collect as little as we can. This page says exactly what leaves your phone, why, who handles it, and how to remove it.</p>
 
 <h2>You don't need an account</h2>
@@ -26,13 +26,17 @@
 <h2>What stays on your phone</h2>
 <ul>
   <li><strong>Your profile:</strong> dietary needs, allergies, severity settings, excluded foods, goals and favourite foods. Without an account it never leaves your phone except as described under "What is sent when you scan".</li>
-  <li><strong>Menu and label photos.</strong> They are read on your phone with Apple's on-device text recognition. The photo is not uploaded.</li>
+  <li><strong>Ingredient-label photos.</strong> They are read on your phone with Apple's on-device text recognition. The photo is not uploaded.</li>
   <li><strong>Photos attached to saved menus.</strong> They stay on your phone, even if you have an account.</li>
 </ul>
 
 <h2>What is sent when you scan</h2>
 <ul>
-  <li><strong>Menu and label text.</strong> The text read from your photo goes to our servers so an AI model can identify the dishes and ingredients. It describes the food, not you.</li>
+  <li><strong>Menu photos.</strong> To read a menu, the photo (cut into pieces so it can be read faster) goes to our servers and to our AI provider, which identifies the dishes, their ingredients, prices and sections and checks them against your dietary needs. It is not kept after the answer is returned. It shows the menu, not you.</li>
+  <li><strong>Label text.</strong> The text read from an ingredient label goes to our servers so an AI model can identify the ingredients.</li>
+  <li><strong>Your chosen language,</strong> so answers come back in it.</li>
+  <li><strong>What you ask us to translate.</strong> When you use "Order this" or ask the kitchen a question, the words you choose to show are sent to be translated. Don't type anything you wouldn't say to a server.</li>
+  <li><strong>Dish names,</strong> when you open a dish, so we can describe it and find photos of it. Dish photos come from Wikimedia Commons and are checked by our AI provider before they are shown.</li>
   <li><strong>Your dietary needs,</strong> with a scan or a "find places near me" request, so the answer fits you. They are used to answer that request.</li>
   <li><strong>Package-front photos.</strong> When you photograph a package without its ingredient list in the frame, that photo is uploaded, because identifying the product cannot be done on the phone. It is sent to our server and to our AI provider to be analyzed, and it is not kept after the answer is returned. The product's name is then looked up on the web (manufacturer and retailer pages) to read its ingredient statement.</li>
   <li><strong>Approximate location,</strong> only when you ask for places near you. It is used for that request and not kept as a history.</li>
@@ -52,7 +56,9 @@
 <h2>Who handles your information</h2>
 <ul>
   <li><strong>Supabase</strong> hosts our database, accounts and servers. Data is encrypted in transit and at rest. Each account's data can be read and changed only by that account.</li>
-  <li><strong>Anthropic (Claude)</strong> analyzes menu text, label text and package-front photos. We send the food content and your dietary needs. We do not send your name, email or account identifier.</li>
+  <li><strong>OpenAI</strong> reads menu photos, describes dishes, checks dish photos and translates what you choose to show a kitchen. We send the food content, your dietary needs and your chosen language. We do not send your name, email or account identifier, and we ask OpenAI not to store the requests.</li>
+  <li><strong>Anthropic (Claude)</strong> analyzes label text and package-front photos. We send the food content and your dietary needs. We do not send your name, email or account identifier.</li>
+  <li><strong>Wikimedia Commons</strong> supplies photos of dishes. We send it dish names only.</li>
   <li><strong>Google Places</strong> provides restaurant names, locations and photos for the nearby features.</li>
   <li><strong>Apple</strong> and <strong>Google</strong>, if you sign in with them. They tell us your email address and an identifier; we do not receive your password.</li>
   <li><strong>Resend</strong> delivers sign-in codes to your email address.</li>
