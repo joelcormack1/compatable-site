@@ -17,8 +17,8 @@
 
 <article>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: October 19, 2026</p>
-<p>Compatable helps you check restaurant menus and packaged foods against your dietary needs and allergies. We collect as little as we can. This page says exactly what leaves your phone, why, who handles it, and how to remove it.</p>
+<p class="updated">Last updated: November 26, 2026</p>
+<p>Compatable is operated by <strong>Compatable LLC</strong>, a California limited liability company ("Compatable", "we", "us"). Compatable helps you check restaurant menus and packaged foods against your dietary needs and allergies. We collect as little as we can. This page says exactly what leaves your phone, why, who handles it, and how to remove it.</p>
 
 <h2>You don't need an account</h2>
 <p>Everything Compatable does, it does without an account. An account is optional and exists for one reason: to keep a backup of your profile and saved menus so you can pick them up on another phone.</p>
@@ -26,20 +26,22 @@
 <h2>What stays on your phone</h2>
 <ul>
   <li><strong>Your profile:</strong> dietary needs, allergies, severity settings, excluded foods, goals and favourite foods. Without an account it never leaves your phone except as described under "What is sent when you scan".</li>
-  <li><strong>Ingredient-label photos.</strong> They are read on your phone with Apple's on-device text recognition. The photo is not uploaded.</li>
-  <li><strong>Photos attached to saved menus.</strong> They stay on your phone, even if you have an account.</li>
+  <li><strong>Ingredient-label photos.</strong> They are read on your phone with Apple's on-device text recognition. The photo is uploaded only if your phone cannot read the text (for example, a script it does not support); see "What is sent when you scan".</li>
+  <li><strong>Photos of menus you scan and photos attached to saved menus.</strong> A copy stays on your phone so you can check a menu again after changing your list. They are never added to your account.</li>
 </ul>
 
 <h2>What is sent when you scan</h2>
 <ul>
   <li><strong>Menu photos.</strong> To read a menu, the photo (cut into pieces so it can be read faster) goes to our servers and to our AI provider, which identifies the dishes, their ingredients, prices and sections and checks them against your dietary needs. It is not kept after the answer is returned. It shows the menu, not you.</li>
-  <li><strong>Label text.</strong> The text read from an ingredient label goes to our servers so an AI model can identify the ingredients.</li>
+  <li><strong>Label text.</strong> The text read from an ingredient label goes to our servers so an AI model can identify the ingredients. If your phone cannot read the text of a label or menu photo, the photo itself is sent to be transcribed, and it is not kept after the answer is returned.</li>
   <li><strong>Your chosen language,</strong> so answers come back in it.</li>
   <li><strong>What you ask us to translate.</strong> When you use "Order this" or ask the kitchen a question, the words you choose to show are sent to be translated. Don't type anything you wouldn't say to a server.</li>
+  <li><strong>Menu links,</strong> when you scan a restaurant's QR code or open a menu link. The web address goes to our server, which opens the page (through Jina, a web-reading service) and reads the menu text or PDF. Only the address is sent to open the page; your profile is not. The menu text is then checked like a photo.</li>
   <li><strong>Dish names,</strong> when you open a dish, so we can describe it and find photos of it. Dish photos come from Wikimedia Commons and are checked by our AI provider before they are shown.</li>
-  <li><strong>Your dietary needs,</strong> with a scan or a "find places near me" request, so the answer fits you. They are used to answer that request.</li>
+  <li><strong>Your dietary needs</strong> and any foods you typed in yourself, with a scan or a food look-up, so the answer fits you. They are used to answer that request.</li>
+  <li><strong>Food names you look up</strong> in the Look Up tab, so we can describe them.</li>
   <li><strong>Package-front photos.</strong> When you photograph a package without its ingredient list in the frame, that photo is uploaded, because identifying the product cannot be done on the phone. It is sent to our server and to our AI provider to be analyzed, and it is not kept after the answer is returned. The product's name is then looked up on the web (manufacturer and retailer pages) to read its ingredient statement.</li>
-  <li><strong>Approximate location,</strong> only when you ask for places near you. It is used for that request and not kept as a history.</li>
+  <li><strong>Location, only if you allow it.</strong> When you save a menu, the app notes where you were so the menu can be pinned on your map. It is not sent with scans. It stays on your phone unless you have an account, in which case it is backed up with that saved menu. Say no to location and everything else still works.</li>
   <li><strong>A random install identifier,</strong> so one phone cannot use more than its share of the service. It is not linked to your name or email.</li>
 </ul>
 
@@ -48,7 +50,7 @@
 <ul>
   <li><strong>Your email address,</strong> or, with Sign in with Apple, the address Apple gives us (which can be Apple's private relay address, so we never learn your real one), and the identifier Apple or Google assigns to your account with us.</li>
   <li><strong>Your profile:</strong> the dietary needs, allergies, severities, excluded foods, goals and favourite foods listed above.</li>
-  <li><strong>Your saved menus,</strong> as text, without their photos.</li>
+  <li><strong>Your saved menus,</strong> as text, without their photos, including where each one was saved if you allowed location.</li>
 </ul>
 <p>We use them only to back up and restore your profile and saved menus, and to keep the service secure. <strong>We treat dietary and allergy information as sensitive health-related information. It is never used for advertising or marketing, never sold, and never shared except with the service providers below, who handle it only to run Compatable.</strong></p>
 <p>There are no passwords. You sign in with Apple, with Google, or with a one-time code we email you.</p>
@@ -57,15 +59,15 @@
 <ul>
   <li><strong>Supabase</strong> hosts our database, accounts and servers. Data is encrypted in transit and at rest. Each account's data can be read and changed only by that account.</li>
   <li><strong>OpenAI</strong> reads menu photos, describes dishes, checks dish photos and translates what you choose to show a kitchen. We send the food content, your dietary needs and your chosen language. We do not send your name, email or account identifier, and we ask OpenAI not to store the requests.</li>
-  <li><strong>Anthropic (Claude)</strong> analyzes label text and package-front photos. We send the food content and your dietary needs. We do not send your name, email or account identifier.</li>
+  <li><strong>Anthropic (Claude)</strong> analyzes label text, package-front photos and food look-ups, and transcribes photos your phone cannot read. We send the food content and your dietary needs. We do not send your name, email or account identifier.</li>
+  <li><strong>Jina</strong> opens restaurant menu web pages from QR codes and links. We send it the web address only.</li>
   <li><strong>Wikimedia Commons</strong> supplies photos of dishes. We send it dish names only.</li>
-  <li><strong>Google Places</strong> provides restaurant names, locations and photos for the nearby features.</li>
   <li><strong>Apple</strong> and <strong>Google</strong>, if you sign in with them. They tell us your email address and an identifier; we do not receive your password.</li>
   <li><strong>Resend</strong> delivers sign-in codes to your email address.</li>
 </ul>
 
 <h2>What we don't do</h2>
-<p>No advertising. No trackers. No analytics SDKs. We never sell data. Crash reports are anonymous and contain no profile content.</p>
+<p>No advertising. No trackers. No analytics SDKs. We never sell data. Crash reports are anonymous and contain no profile content. Problem reports you send from the app (what you picked and anything you typed) are stored without your name, email or account.</p>
 
 <h2>Keeping it and deleting it</h2>
 <ul>
@@ -85,12 +87,12 @@
 <p>When this policy changes we update this page and the date above. If a change affects what an account stores, we tell you in the app first.</p>
 
 <h2>Contact</h2>
-<p><a href="mailto:hello@compatable.app">hello@compatable.app</a></p>
+<p>Compatable LLC, California, USA. <a href="mailto:hello@compatable.app">hello@compatable.app</a></p>
 </article>
 
 <footer>
   <div><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/support.html">Support</a></div>
-  <div>&copy; 2026 Compatable &middot; <a href="mailto:hello@compatable.app">hello@compatable.app</a></div>
+  <div>&copy; 2026 Compatable LLC &middot; <a href="mailto:hello@compatable.app">hello@compatable.app</a></div>
 </footer>
 </div>
 </body>
